@@ -1,2 +1,12 @@
 @import './variables';
 
+@mixin alignCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin justifyAlignCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

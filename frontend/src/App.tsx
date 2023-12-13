@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './styles/global.scss';
 import { ThemeProvider } from 'styled-components';
 import  { GlobalStyles, darkTheme, lightTheme, ITheme } from './styles/theme';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
 
 function App() {
   const [theme, setTheme] = useState<keyof ITheme>('dark');
@@ -13,7 +15,10 @@ function App() {
     <ThemeProvider theme={currentTheme}>
       <>
         <GlobalStyles theme={currentTheme} />
-        <div>App</div>
+        <div className='page'>
+          <Navbar />
+          <Hero />
+        </div>
       </>
     </ThemeProvider>
   );
